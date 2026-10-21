@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>武汉多图层专题地图</title>
+  <meta name="description" content="1932 年武汉霍乱研究与武汉地区 W1-W5 多图层专题地图。">
   <style>
     :root { color-scheme: light; }
     body {
@@ -19,6 +20,7 @@
     }
     header h1 { margin: 0 0 8px; font-size: 28px; }
     header p { margin: 0; color: #cbd5e1; }
+    .updated { margin-left: 10px; color: #94a3b8; font-size: 13px; }
     main { max-width: 1400px; margin: auto; padding: 28px 36px 52px; }
     h2 { margin: 30px 0 16px; }
     .grid {
@@ -33,23 +35,35 @@
       overflow: hidden;
       box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
     }
-    .card img { width: 100%; display: block; background: #e2e8f0; }
+    .card img {
+      width: 100%;
+      display: block;
+      aspect-ratio: 4 / 3;
+      object-fit: contain;
+      background: #e2e8f0;
+    }
     .card div { padding: 14px 16px 16px; }
     .card h3 { margin: 0 0 8px; font-size: 17px; }
     .card p { margin: 0 0 12px; color: #475569; font-size: 13px; }
+    .card p.revision {
+      margin: -2px 0 12px;
+      color: #9a3412;
+      font-size: 12px;
+    }
     a { color: #1d4ed8; text-decoration: none; }
+    a + a { margin-left: 12px; }
     a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
   <header>
     <h1>武汉多图层专题地图</h1>
-    <p>GeoLibre / QGIS / ArcGIS Pro 多源制图成果</p>
+    <p>GeoLibre / QGIS / ArcGIS Pro 多源制图成果<span class="updated">最近更新：2026-10-21</span></p>
   </header>
   <main>
     <div class="grid">
       <article class="card">
-        <img src="w1_location.png" alt="武汉区位与行政区划">
+        <img src="w1_location.png" alt="武汉区位与行政区划" loading="lazy" decoding="async">
         <div>
           <h3>W1 武汉区位与行政区划</h3>
           <p>市域、13 区、水系与湖北省区位插图。</p>
@@ -58,7 +72,7 @@
         </div>
       </article>
       <article class="card">
-        <img src="w2_terrain_water.png" alt="武汉地形与水系">
+        <img src="w2_terrain_water.png" alt="武汉地形与水系" loading="lazy" decoding="async">
         <div>
           <h3>W2 武汉地形与水系</h3>
           <p>DEM、山体阴影、湖泊与主要河流。</p>
@@ -67,7 +81,7 @@
         </div>
       </article>
       <article class="card">
-        <img src="w3_development.png" alt="武汉交通与居民地开发强度">
+        <img src="w3_development.png" alt="武汉交通与居民地开发强度" loading="lazy" decoding="async">
         <div>
           <h3>W3 武汉交通与居民地开发强度</h3>
           <p>连续平滑开发强度面，叠加道路、铁路与居民地。</p>
@@ -76,16 +90,17 @@
         </div>
       </article>
       <article class="card">
-        <img src="w4_cholera_1932.png" alt="1932 武汉霍乱疫情与防疫设施">
+        <img src="w4_cholera_1932.png?v=20261021" alt="1932 武汉霍乱疫情与防疫设施" loading="lazy" decoding="async">
         <div>
           <h3>W4 1932 武汉霍乱疫情与防疫设施</h3>
-          <p>历史设施、警署、位置不确定性缓冲与时序。</p>
-          <a href="w4_cholera_1932_quick.pdf">快速预览 PDF</a>
-          <a href="w4_cholera_1932.pdf">高分辨率原图 PDF</a>
+          <p>历史设施、警署、定位精度与机构账本；现代底图仅作空间参照。</p>
+          <p class="revision">2026-10-21 修订：剔除 1935 年机构，设施账本按 29 条重算。</p>
+          <a href="w4_cholera_1932_quick.pdf?v=20261021">快速预览 PDF</a>
+          <a href="w4_cholera_1932.pdf?v=20261021">高分辨率原图 PDF</a>
         </div>
       </article>
       <article class="card">
-        <img src="w5_data_quality.png" alt="武汉制图数据覆盖与质量核查">
+        <img src="w5_data_quality.png" alt="武汉制图数据覆盖与质量核查" loading="lazy" decoding="async">
         <div>
           <h3>W5 数据覆盖与质量核查</h3>
           <p>天地图 1:25 万 DLG 六幅范围与接边检查。</p>
